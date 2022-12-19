@@ -7,7 +7,6 @@ createApp({
         return{
             itemActive: 0,
             autoplay: null,
-            click: null,
             slides: [
                 {   
                     image: 'img/01.webp',
@@ -60,8 +59,5 @@ createApp({
         playStop(){
             clearInterval(this.autoplay)
         },
-        clickThumb(){
-            this.click = index
-        }
     },
 }).mount('#app')
