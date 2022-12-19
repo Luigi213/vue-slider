@@ -5,6 +5,8 @@ const {
 createApp({
     data(){
         return{
+            itemActive: 0,
+            thumbActive: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -29,5 +31,22 @@ createApp({
                 }
             ],
         }
-    }
+    },
+    methods: {
+        imageSlides(index){
+            this.itemActive == index;
+        },
+        next(){
+            this.itemActive++;
+            if(this.itemActive > this.slides.length - 1){
+                this.itemActive = 0;
+            }
+        },      
+        prev(){
+            this.itemActive--;
+            if(this.itemActive < 0){
+                this.itemActive = this.slides.length - 1;
+            }
+        }
+    },
 }).mount('#app')
