@@ -6,7 +6,6 @@ createApp({
     data(){
         return{
             itemActive: 0,
-            thumbActive: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -34,7 +33,7 @@ createApp({
     },
     methods: {
         imageSlides(index){
-            this.itemActive == index;
+            this.itemActive = index;
         },
         next(){
             this.itemActive++;
